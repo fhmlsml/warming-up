@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/467/417/159/dark-blue-wallpaper-preview.jpg");
+    font-family: "Muli", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* .wrapper {
+    background-image: url("https://i.pinimg.com/originals/36/f0/94/36f0949c623b61a235fd6645fa507236.jpg");
+    background-size: auto 100%;
+    display: flex;
+} */
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 35px;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    /* transition: flex 0.7s ease-in; */
+    transition: all 0.8s ease-in;
+}
+
+.panel.active {
+    flex: 10;
+}
+
+.panel.rimuru {
+    border-style: solid;
+    border-color: rgb(62, 230, 236);
+    border-width: 2px;
+}
+
+.panel.active.rimuru {
+    background-position-y: 2px;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    border-width: 5px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(6),
+    .panel:nth-of-type(7) {
+        display: none;
+    }
+}
